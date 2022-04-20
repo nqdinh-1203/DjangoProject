@@ -14,7 +14,7 @@
             <a class="btn btn-primary  btn-sm btn-block" href="">Create Customer</a>
             <table class="table table-sm">
                 <tr>
-                    <th>id</th>
+                    <th></th>
                     <th>Customer</th>
                     <th>Phone</th>
                 </tr>
@@ -22,7 +22,7 @@
                 {% for cus in customers %}
 
                 <tr>
-                    <th>{{cus.id}}</th>
+                    <th><a class="btn btn-primary btn-sm" href="{% url 'customer' cus.id %}">View</a></th>
                     <th>{{cus.name}}</th>
                     <th>{{cus.phone}}</th>
                 </tr>
@@ -53,8 +53,8 @@
                     <th>{{order.product}}</th>
                     <th>{{order.date_created}}</th>
                     <th>{{order.status}}</th>
-                    <th><a href="">Update</a></th>
-                    <th><a href="">Delete</a></th>
+                    <th><a class="btn btn-sm btn-info" href="">Update</a></th>
+                    <th><a class="btn btn-sm btn-danger" href="">Delete</a></th>
                 </tr>
 
                 {% endfor %}
